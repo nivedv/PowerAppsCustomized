@@ -1,0 +1,251 @@
+# SecureShield Insurance Claims Management - PowerApps Lab Assignment
+
+## Trainer - Nived Varma / Microsoft Certified Trainer
+
+## 📋 Lab Overview
+
+Welcome to your hands-on PowerApps lab! You'll be building a **Claims Management Application** for SecureShield Insurance that allows agents to view policy holders, track their insurance claims, and manage claim statuses efficiently.
+
+### 🎯 Learning Objectives
+
+By completing this lab, you will demonstrate proficiency in:
+
+- Creating PowerApps from scratch using Blank Canvas
+- Connecting to Excel data sources
+- Using Gallery controls (Horizontal and Vertical)
+- Implementing Filter() functions for data relationships
+- Adding interactive controls with Collect() functionality
+- Applying conditional formatting with If() statements
+- Screen navigation using buttons
+
+---
+
+## 📊 Business Scenario
+
+As a SecureShield Insurance digital transformation team member, you need to create a mobile-friendly app that helps insurance agents:
+
+1. **View Policy Holders**: Browse through customer information quickly
+2. **Track Claims**: See all claims associated with each policy holder
+3. **Manage Selections**: Select multiple claims for batch processing
+4. **Monitor Status**: Visually identify claim statuses at a glance
+5. **Navigate Efficiently**: Move between different app screens seamlessly
+
+---
+
+## 📁 Data Files Provided
+
+You will work with two CSV files containing synthetic SecureShield Insurance data:
+
+### File 1: PolicyHolders.csv
+
+Contains customer information including Policy ID, names, contact details, and policy types.
+
+### File 2: InsuranceClaims.csv
+
+Contains claim records linked to policy holders via Policy ID, including claim amounts, dates, and statuses.
+
+**Key Relationship**: Both files share the `PolicyID` field for data connections.
+
+---
+
+## 🛠️ Lab Instructions
+
+### Phase 1: App Foundation & Data Connection
+
+#### Step 1: Create New Canvas App
+
+1. Open PowerApps and create a new **Blank Canvas App**
+2. Choose **Tablet layout** for optimal viewing experience
+3. Name your app: `SecureShield Claims Manager`
+
+#### Step 2: Connect to Data Sources
+
+1. Import both CSV files to your OneDrive or SharePoint
+2. Convert CSV files to **Excel Tables** (Format as Table in Excel)
+3. Connect your PowerApps to both Excel data sources:
+   - PolicyHolders table
+   - InsuranceClaims table
+
+### Phase 2: Policy Holders Display
+
+#### Step 3: Create Policy Holders Gallery
+
+1. Add a **Vertical Gallery** control to Screen1
+2. Connect it to the PolicyHolders data source
+3. Configure the gallery to display:
+   - Policy Holder Name (Title)
+   - Policy Type (Subtitle)
+   - Policy ID (Body)
+4. Position the gallery on the left side of the screen (approximately 40% width)
+
+### Phase 3: Claims Display with Filtering
+
+#### Step 4: Implement Claims Gallery with Filter
+
+1. Add a **Horizontal Gallery** control to the right side of Screen1
+2. Connect it to the InsuranceClaims data source
+3. Use the **Filter()** function to show only claims for the selected policy holder:
+   ```
+   Filter(InsuranceClaims, PolicyID = Gallery1.Selected.PolicyID)
+   ```
+4. Configure the claims gallery to display:
+   - Claim ID
+   - Claim Amount
+   - Claim Date
+   - Status
+
+### Phase 4: Interactive Selection Features
+
+#### Step 5: Add Checkbox Selection
+
+1. Add **Checkbox** controls to the Claims Gallery
+2. Implement **Collect()** function to store selected claims in a collection named `SelectedClaims`
+3. When checkbox is checked:
+   ```
+   Collect(SelectedClaims, ThisItem)
+   ```
+4. When unchecked, remove from collection using **Remove()** function
+
+### Phase 5: Visual Enhancements
+
+#### Step 6: Apply Conditional Formatting
+
+1. Use **If()** statements to apply different colors based on claim status:
+   - **Green**: Approved claims
+   - **Red**: Denied claims
+   - **Orange**: Pending claims
+   - **Blue**: Under Review claims
+
+Example formula for background color:
+
+```
+If(ThisItem.Status = "Approved", Green,
+   ThisItem.Status = "Denied", Red,
+   ThisItem.Status = "Pending", Orange,
+   Blue)
+```
+
+### Phase 6: Navigation Implementation
+
+#### Step 7: Create Second Screen and Navigation
+
+1. Add a new screen (`Screen2`) for "Selected Claims Summary"
+2. Add a **Button** on Screen1 labeled "View Selected Claims"
+3. Configure button's **OnSelect** property:
+   ```
+   Navigate(Screen2, ScreenTransition.SlideLeft)
+   ```
+4. On Screen2, display the `SelectedClaims` collection using another gallery
+5. Add a "Back" button to return to Screen1
+
+---
+
+## ✅ Deliverables Checklist
+
+Ensure your completed app includes:
+
+- [ ] **Blank Canvas App** created from scratch
+- [ ] **Two data sources** connected (PolicyHolders & InsuranceClaims)
+- [ ] **Vertical Gallery** displaying policy holders
+- [ ] **Horizontal Gallery** displaying filtered claims
+- [ ] **Filter() function** working correctly between galleries
+- [ ] **Checkbox controls** with Collect() functionality
+- [ ] **Conditional formatting** using If() statements
+- [ ] **Two screens** with button navigation
+- [ ] **Professional appearance** suitable for SecureShield Insurance agents
+
+---
+
+## 🚀 Enhancement Opportunities (Optional)
+
+Ready to take your app to the next level? Try these advanced features:
+
+### Beginner Enhancements
+
+- Add a search box to filter policy holders by name
+- Include total claim amount calculation for each policy holder
+- Add icons to represent different policy types
+
+### Intermediate Enhancements
+
+- Implement a "Clear All Selections" button
+- Add a confirmation dialog before navigating to Screen2
+- Create a dashboard screen showing claims statistics
+- Add date picker to filter claims by date range
+
+### Advanced Enhancements
+
+- Implement email functionality to send selected claims summary
+- Add photo capture capability for claim documentation
+- Create a approval workflow with different user roles
+- Integrate with Power Automate for automated notifications
+
+---
+
+## 📝 Submission Guidelines
+
+### Testing Your App
+
+1. **Test Data Relationships**: Verify claims filter correctly when selecting different policy holders
+2. **Test Selection Logic**: Ensure checkboxes properly add/remove items from collection
+3. **Test Conditional Formatting**: Confirm colors change based on claim status
+4. **Test Navigation**: Verify smooth transitions between screens
+5. **Test Edge Cases**: What happens with no claims for a policy holder?
+
+### Documentation Required
+
+Create a brief document (1-2 pages) including:
+
+- Screenshot of your main app screen
+- List of any challenges encountered and how you solved them
+- Description of one enhancement you would add if given more time
+- Brief explanation of how this app could benefit SecureShield Insurance agents
+
+---
+
+## 🎯 Success Criteria
+
+Your app will be evaluated on:
+
+| Criteria                  | Excellent (4)                     | Good (3)                         | Satisfactory (2)         | Needs Improvement (1)          |
+| ------------------------- | --------------------------------- | -------------------------------- | ------------------------ | ------------------------------ |
+| **Data Connection**       | Both sources connected flawlessly | Minor connection issues resolved | Basic connection working | Connection problems persist    |
+| **Gallery Configuration** | Perfect filtering and display     | Good filtering with minor issues | Basic filtering works    | Filtering not working properly |
+| **Interactive Features**  | All controls work perfectly       | Most controls functional         | Basic controls work      | Controls not responding        |
+| **Visual Design**         | Professional, intuitive UI        | Good visual appeal               | Acceptable appearance    | Poor visual design             |
+| **Navigation**            | Smooth, logical flow              | Good navigation                  | Basic navigation works   | Navigation issues              |
+
+---
+
+## 💡 Tips for Success
+
+**Before You Start:**
+
+- Review the sample data to understand the relationships
+- Plan your screen layout on paper first
+- Test each feature as you build it
+
+**During Development:**
+
+- Save your work frequently
+- Use meaningful names for your controls
+- Test with different data selections
+- Keep your formulas simple and readable
+
+**Troubleshooting Common Issues:**
+
+- If galleries don't show data, check your data source connections
+- If filtering isn't working, verify the field names match exactly
+- If conditional formatting isn't applying, check your If() statement syntax
+- If navigation fails, ensure screen names are correct in Navigate() function
+
+---
+
+**Best Practices:**
+
+- Name your controls descriptively (e.g., `gal_PolicyHolders`, `btn_ViewSelected`)
+- Add comments to complex formulas
+- Keep your app responsive for different screen sizes
+- Always provide user feedback for actions (loading states, success messages)
+
+---
