@@ -1,0 +1,31 @@
+ClaimID,PolicyID,ClaimAmount,ClaimDate,Status,Description,AdjusterName
+CLM001,POL001,15000.00,2024-01-15,Approved,Life insurance claim for beneficiary,John Smith
+CLM002,POL002,3500.00,2024-02-03,Pending,Auto accident damage repair,Sarah Davis
+CLM003,POL003,8500.00,2024-01-28,Approved,Water damage from burst pipe,Mike Johnson
+CLM004,POL001,2200.00,2024-03-10,Denied,Medical expense claim,John Smith
+CLM005,POL004,25000.00,2024-02-20,Under Review,Life insurance claim processing,Lisa Wilson
+CLM006,POL005,1800.00,2024-03-05,Approved,Minor auto collision repair,Tom Anderson
+CLM007,POL002,750.00,2024-01-12,Approved,Windshield replacement,Sarah Davis
+CLM008,POL006,45000.00,2024-02-15,Pending,Major life insurance claim,Robert Garcia
+CLM009,POL007,6200.00,2024-03-22,Under Review,Storm damage to roof,Emily Chen
+CLM010,POL003,1100.00,2024-01-05,Approved,Plumbing repair coverage,Mike Johnson
+CLM011,POL008,4300.00,2024-02-28,Denied,Collision claim - policy lapsed,David Martinez
+CLM012,POL009,12000.00,2024-03-15,Approved,Disability insurance payout,Karen Taylor
+CLM013,POL010,2800.00,2024-01-20,Pending,Fire damage assessment,Steve Brown
+CLM014,POL005,950.00,2024-02-08,Approved,Glass damage repair,Tom Anderson
+CLM015,POL011,2100.00,2024-03-12,Under Review,Theft claim processing,Jennifer White
+CLM016,POL004,350.00,2024-01-30,Approved,Medical equipment coverage,Lisa Wilson
+CLM017,POL012,18000.00,2024-02-25,Pending,Critical illness claim,Michael Clark
+CLM018,POL007,750.00,2024-03-18,Denied,Pre-existing condition exclusion,Emily Chen
+CLM019,POL013,5400.00,2024-01-08,Approved,Electrical fire damage,Alex Rodriguez
+CLM020,POL002,2600.00,2024-03-20,Under Review,Hit and run investigation,Sarah Davis
+CLM021,POL014,1200.00,2024-02-12,Approved,Comprehensive coverage claim,Daniel Harris
+CLM022,POL015,8900.00,2024-03-08,Pending,Term life insurance processing,Monica Lewis
+CLM023,POL006,680.00,2024-01-25,Approved,Prescription coverage,Robert Garcia
+CLM024,POL001,4500.00,2024-02-18,Denied,Claim outside policy terms,John Smith
+CLM025,POL009,320.00,2024-03-25,Approved,Vision care claim,Karen Taylor
+CLM026,POL011,7200.00,2024-02-05,Under Review,Total loss vehicle claim,Jennifer White
+CLM027,POL008,890.00,2024-01-15,Approved,Roadside assistance,David Martinez
+CLM028,POL015,1450.00,2024-03-02,Pending,Health insurance claim,Monica Lewis
+CLM029,POL012,560.00,2024-01-18,Approved,Dental procedure coverage,Michael Clark
+CLM030,POL013,3200.00,2024-02-22,Denied,Maintenance issue exclusion,Alex Rodriguez

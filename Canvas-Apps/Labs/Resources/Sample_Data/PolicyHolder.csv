@@ -1,0 +1,16 @@
+PolicyID,FirstName,LastName,Email,Phone,PolicyType,PremiumAmount,StartDate
+POL001,Sarah,Johnson,sarah.johnson@email.com,(555) 123-4567,Life Insurance,285.50,2022-03-15
+POL002,Michael,Chen,michael.chen@email.com,(555) 234-5678,Auto Insurance,156.75,2023-01-20
+POL003,Emily,Rodriguez,emily.rodriguez@email.com,(555) 345-6789,Home Insurance,89.25,2021-11-08
+POL004,James,Williams,james.williams@email.com,(555) 456-7890,Life Insurance,412.00,2022-07-03
+POL005,Amanda,Taylor,amanda.taylor@email.com,(555) 567-8901,Auto Insurance,198.30,2023-04-12
+POL006,David,Brown,david.brown@email.com,(555) 678-9012,Life Insurance,356.75,2021-09-25
+POL007,Lisa,Anderson,lisa.anderson@email.com,(555) 789-0123,Home Insurance,125.60,2022-12-10
+POL008,Robert,Martinez,robert.martinez@email.com,(555) 890-1234,Auto Insurance,167.90,2023-02-28
+POL009,Jennifer,Garcia,jennifer.garcia@email.com,(555) 901-2345,Life Insurance,298.45,2022-05-17
+POL010,Christopher,Wilson,christopher.wilson@email.com,(555) 012-3456,Home Insurance,78.20,2021-08-14
+POL011,Michelle,Moore,michelle.moore@email.com,(555) 123-4568,Auto Insurance,189.65,2023-06-05
+POL012,Daniel,Jackson,daniel.jackson@email.com,(555) 234-5679,Life Insurance,445.80,2022-01-30
+POL013,Ashley,White,ashley.white@email.com,(555) 345-6780,Home Insurance,95.40,2021-12-22
+POL014,Matthew,Harris,matthew.harris@email.com,(555) 456-7891,Auto Insurance,201.15,2023-03-18
+POL015,Rebecca,Clark,rebecca.clark@email.com,(555) 567-8902,Life Insurance,327.90,2022-09-08
